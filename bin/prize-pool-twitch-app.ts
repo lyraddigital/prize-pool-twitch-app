@@ -1,8 +1,6 @@
-#!/usr/bin/env node
-import 'source-map-support/register';
-import * as cdk from '@aws-cdk/core';
+import { App } from '@aws-cdk/core';
 
-import { PrizePoolTwitchAppStack } from '../lib/prize-pool-twitch-app-stack';
+import { PrizePoolTwitchAppStack } from '../lib';
 
-const app = new cdk.App();
+const app = new App();
 new PrizePoolTwitchAppStack(app, 'PrizePoolTwitchAppStack');

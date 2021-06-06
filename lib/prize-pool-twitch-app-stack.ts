@@ -1,7 +1,10 @@
 import { Construct, Stack, StackProps } from '@aws-cdk/core';
 
-import { PrizePoolDatabase } from './constructs/prize-pool-database';
-import { TwitchBotWebsocketApi } from './constructs/twitch-bot-websocket-api';
+import { 
+  PrizePoolDatabase,
+  SubscriptionPublisher,
+  TwitchBotWebsocketApi
+} from './constructs';
 
 export class PrizePoolTwitchAppStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
@@ -10,5 +13,9 @@ export class PrizePoolTwitchAppStack extends Stack {
     const prizePoolDatabase = new PrizePoolDatabase(this, 'PrizePoolDatabase');
     const twitchBotWebsocketApi = new TwitchBotWebsocketApi(this, 'TwitchBotWebsocketApi');
     
+    new SubscriptionPublisher(this, 'SubscriptionPublisher', {
+      prizePoolTableStreamSource: prizePoolDatabase.tableStreamSource,
+      twitchBotWebsocketApiSettings: twitchBotWebsocketApi.settings
+    });
   }
 }
