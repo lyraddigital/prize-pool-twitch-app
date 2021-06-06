@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+require("source-map-support/register");
+const cdk = require("@aws-cdk/core");
+const prize_pool_twitch_app_stack_1 = require("../lib/prize-pool-twitch-app-stack");
+const app = new cdk.App();
+new prize_pool_twitch_app_stack_1.PrizePoolTwitchAppStack(app, 'PrizePoolTwitchAppStack', {
+    /* If you don't specify 'env', this stack will be environment-agnostic.
+     * Account/Region-dependent features and context lookups will not work,
+     * but a single synthesized template can be deployed anywhere. */
+    /* Uncomment the next line to specialize this stack for the AWS Account
+     * and Region that are implied by the current CLI configuration. */
+    // env: { account: process.env.CDK_DEFAULT_ACCOUNT, region: process.env.CDK_DEFAULT_REGION },
+    /* Uncomment the next line if you know exactly what Account and Region you
+     * want to deploy the stack to. */
+    env: { account: '767013533477', region: 'ap-southeast-2' },
+});
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHJpemUtcG9vbC10d2l0Y2gtYXBwLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsicHJpemUtcG9vbC10d2l0Y2gtYXBwLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQUNBLHVDQUFxQztBQUNyQyxxQ0FBcUM7QUFDckMsb0ZBQTZFO0FBRTdFLE1BQU0sR0FBRyxHQUFHLElBQUksR0FBRyxDQUFDLEdBQUcsRUFBRSxDQUFDO0FBQzFCLElBQUkscURBQXVCLENBQUMsR0FBRyxFQUFFLHlCQUF5QixFQUFFO0lBQzFEOztxRUFFaUU7SUFFakU7dUVBQ21FO0lBQ25FLDZGQUE2RjtJQUU3RjtzQ0FDa0M7SUFDbEMsR0FBRyxFQUFFLEVBQUUsT0FBTyxFQUFFLGNBQWMsRUFBRSxNQUFNLEVBQUUsZ0JBQWdCLEVBQUU7Q0FHM0QsQ0FBQyxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiIyEvdXNyL2Jpbi9lbnYgbm9kZVxuaW1wb3J0ICdzb3VyY2UtbWFwLXN1cHBvcnQvcmVnaXN0ZXInO1xuaW1wb3J0ICogYXMgY2RrIGZyb20gJ0Bhd3MtY2RrL2NvcmUnO1xuaW1wb3J0IHsgUHJpemVQb29sVHdpdGNoQXBwU3RhY2sgfSBmcm9tICcuLi9saWIvcHJpemUtcG9vbC10d2l0Y2gtYXBwLXN0YWNrJztcblxuY29uc3QgYXBwID0gbmV3IGNkay5BcHAoKTtcbm5ldyBQcml6ZVBvb2xUd2l0Y2hBcHBTdGFjayhhcHAsICdQcml6ZVBvb2xUd2l0Y2hBcHBTdGFjaycsIHtcbiAgLyogSWYgeW91IGRvbid0IHNwZWNpZnkgJ2VudicsIHRoaXMgc3RhY2sgd2lsbCBiZSBlbnZpcm9ubWVudC1hZ25vc3RpYy5cbiAgICogQWNjb3VudC9SZWdpb24tZGVwZW5kZW50IGZlYXR1cmVzIGFuZCBjb250ZXh0IGxvb2t1cHMgd2lsbCBub3Qgd29yayxcbiAgICogYnV0IGEgc2luZ2xlIHN5bnRoZXNpemVkIHRlbXBsYXRlIGNhbiBiZSBkZXBsb3llZCBhbnl3aGVyZS4gKi9cblxuICAvKiBVbmNvbW1lbnQgdGhlIG5leHQgbGluZSB0byBzcGVjaWFsaXplIHRoaXMgc3RhY2sgZm9yIHRoZSBBV1MgQWNjb3VudFxuICAgKiBhbmQgUmVnaW9uIHRoYXQgYXJlIGltcGxpZWQgYnkgdGhlIGN1cnJlbnQgQ0xJIGNvbmZpZ3VyYXRpb24uICovXG4gIC8vIGVudjogeyBhY2NvdW50OiBwcm9jZXNzLmVudi5DREtfREVGQVVMVF9BQ0NPVU5ULCByZWdpb246IHByb2Nlc3MuZW52LkNES19ERUZBVUxUX1JFR0lPTiB9LFxuXG4gIC8qIFVuY29tbWVudCB0aGUgbmV4dCBsaW5lIGlmIHlvdSBrbm93IGV4YWN0bHkgd2hhdCBBY2NvdW50IGFuZCBSZWdpb24geW91XG4gICAqIHdhbnQgdG8gZGVwbG95IHRoZSBzdGFjayB0by4gKi9cbiAgZW52OiB7IGFjY291bnQ6ICc3NjcwMTM1MzM0NzcnLCByZWdpb246ICdhcC1zb3V0aGVhc3QtMicgfSxcblxuICAvKiBGb3IgbW9yZSBpbmZvcm1hdGlvbiwgc2VlIGh0dHBzOi8vZG9jcy5hd3MuYW1hem9uLmNvbS9jZGsvbGF0ZXN0L2d1aWRlL2Vudmlyb25tZW50cy5odG1sICovXG59KTtcbiJdfQ==

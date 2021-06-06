@@ -1,0 +1,843 @@
+{
+  "version": "11.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "PrizePoolTwitchAppStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://767013533477/ap-southeast-2",
+      "properties": {
+        "templateFile": "PrizePoolTwitchAppStack.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/PrizePoolTwitchAppStack": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.d437f816eb1bf3ff3e2d85a8048c38af377500fe462c15c36a29dba6efeb0a6a.zip",
+              "id": "d437f816eb1bf3ff3e2d85a8048c38af377500fe462c15c36a29dba6efeb0a6a",
+              "packaging": "file",
+              "sourceHash": "d437f816eb1bf3ff3e2d85a8048c38af377500fe462c15c36a29dba6efeb0a6a",
+              "s3BucketParameter": "AssetParametersd437f816eb1bf3ff3e2d85a8048c38af377500fe462c15c36a29dba6efeb0a6aS3Bucket59E1698A",
+              "s3KeyParameter": "AssetParametersd437f816eb1bf3ff3e2d85a8048c38af377500fe462c15c36a29dba6efeb0a6aS3VersionKey00278D69",
+              "artifactHashParameter": "AssetParametersd437f816eb1bf3ff3e2d85a8048c38af377500fe462c15c36a29dba6efeb0a6aArtifactHashE78A9495"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/construct-compat.ts:451:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:171:23)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "PrizePoolTwitchAppStack.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack.ts:663:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:145:40)",
+              "AssetCode.bind (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/code.ts:277:20)",
+              "new Function (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/function.ts:600:29)",
+              "new PrizePoolTwitchAppStack (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/lib/prize-pool-twitch-app-stack.ts:24:38)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/bin/prize-pool-twitch-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.74a860141bef9342a842556cec0b124de49c737eaab3f74cb306ab9ae1f6cb98.zip",
+              "id": "74a860141bef9342a842556cec0b124de49c737eaab3f74cb306ab9ae1f6cb98",
+              "packaging": "file",
+              "sourceHash": "74a860141bef9342a842556cec0b124de49c737eaab3f74cb306ab9ae1f6cb98",
+              "s3BucketParameter": "AssetParameters74a860141bef9342a842556cec0b124de49c737eaab3f74cb306ab9ae1f6cb98S3BucketFFCD820A",
+              "s3KeyParameter": "AssetParameters74a860141bef9342a842556cec0b124de49c737eaab3f74cb306ab9ae1f6cb98S3VersionKey6F3C3FF0",
+              "artifactHashParameter": "AssetParameters74a860141bef9342a842556cec0b124de49c737eaab3f74cb306ab9ae1f6cb98ArtifactHash8DB86670"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/construct-compat.ts:451:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:171:23)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "PrizePoolTwitchAppStack.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack.ts:663:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:145:40)",
+              "AssetCode.bind (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/code.ts:277:20)",
+              "new Function (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/function.ts:600:29)",
+              "new PrizePoolTwitchAppStack (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/lib/prize-pool-twitch-app-stack.ts:40:23)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/bin/prize-pool-twitch-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.bf68d536396eb6ee4370b5d6a3329a56301cb801ffc1d32ca98f2e88f503ee49.zip",
+              "id": "bf68d536396eb6ee4370b5d6a3329a56301cb801ffc1d32ca98f2e88f503ee49",
+              "packaging": "file",
+              "sourceHash": "bf68d536396eb6ee4370b5d6a3329a56301cb801ffc1d32ca98f2e88f503ee49",
+              "s3BucketParameter": "AssetParametersbf68d536396eb6ee4370b5d6a3329a56301cb801ffc1d32ca98f2e88f503ee49S3Bucket6E9EEC3C",
+              "s3KeyParameter": "AssetParametersbf68d536396eb6ee4370b5d6a3329a56301cb801ffc1d32ca98f2e88f503ee49S3VersionKeyA11D9C6A",
+              "artifactHashParameter": "AssetParametersbf68d536396eb6ee4370b5d6a3329a56301cb801ffc1d32ca98f2e88f503ee49ArtifactHash223CAC25"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/construct-compat.ts:451:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:171:23)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "PrizePoolTwitchAppStack.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack.ts:663:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:145:40)",
+              "AssetCode.bind (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/code.ts:277:20)",
+              "new Function (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/function.ts:600:29)",
+              "new PrizePoolTwitchAppStack (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/lib/prize-pool-twitch-app-stack.ts:47:26)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/bin/prize-pool-twitch-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PrizePoolTwitchAppStack/PrizePool": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "PrizePoolF13203AD"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/construct-compat.ts:451:92)",
+              "new Table (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:1137:38)",
+              "new PrizePoolTwitchAppStack (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/lib/prize-pool-twitch-app-stack.ts:12:28)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/bin/prize-pool-twitch-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PrizePoolTwitchAppStack/PrizePool/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PrizePoolF13203AD",
+            "trace": [
+              "new Table (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:1109:18)",
+              "new PrizePoolTwitchAppStack (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/lib/prize-pool-twitch-app-stack.ts:12:28)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/bin/prize-pool-twitch-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PrizePoolTwitchAppStack/SocketConnections": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "SocketConnections5A144E27"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/construct-compat.ts:451:92)",
+              "new Table (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:1137:38)",
+              "new PrizePoolTwitchAppStack (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/lib/prize-pool-twitch-app-stack.ts:18:36)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/bin/prize-pool-twitch-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PrizePoolTwitchAppStack/SocketConnections/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SocketConnections5A144E27",
+            "trace": [
+              "new Table (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:1109:18)",
+              "new PrizePoolTwitchAppStack (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/lib/prize-pool-twitch-app-stack.ts:18:36)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/bin/prize-pool-twitch-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PrizePoolTwitchAppStack/ReportNewSubcriberBotLambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReportNewSubcriberBotLambdaServiceRoleE47CCA7E",
+            "trace": [
+              "new Role (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-iam/lib/role.ts:326:18)",
+              "new Function (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/function.ts:580:31)",
+              "new PrizePoolTwitchAppStack (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/lib/prize-pool-twitch-app-stack.ts:24:38)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/bin/prize-pool-twitch-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PrizePoolTwitchAppStack/ReportNewSubcriberBotLambda/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReportNewSubcriberBotLambdaServiceRoleDefaultPolicy446B0DC4",
+            "trace": [
+              "new Policy (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-iam/lib/policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-iam/lib/role.ts:367:28)",
+              "Function.addToPrincipal (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-iam/lib/grant.ts:164:61)",
+              "Table.grant (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:589:22)",
+              "new PrizePoolTwitchAppStack (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/lib/prize-pool-twitch-app-stack.ts:35:28)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/bin/prize-pool-twitch-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PrizePoolTwitchAppStack/ReportNewSubcriberBotLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReportNewSubcriberBotLambdaA32C7A99",
+            "trace": [
+              "new Function (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/function.ts:642:35)",
+              "new PrizePoolTwitchAppStack (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/lib/prize-pool-twitch-app-stack.ts:24:38)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/bin/prize-pool-twitch-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PrizePoolTwitchAppStack/ReportNewSubcriberBotLambda/DynamoDBEventSource:PrizePoolTwitchAppStackPrizePool048F10E6/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReportNewSubcriberBotLambdaDynamoDBEventSourcePrizePoolTwitchAppStackPrizePool048F10E68CF2FBEC",
+            "trace": [
+              "new EventSourceMapping (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/event-source-mapping.ts:301:35)",
+              "Function.addEventSourceMapping (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:297:12)",
+              "DynamoEventSource.bind (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda-event-sources/lib/dynamodb.ts:28:39)",
+              "new PrizePoolTwitchAppStack (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/lib/prize-pool-twitch-app-stack.ts:38:8)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/bin/prize-pool-twitch-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PrizePoolTwitchAppStack/AssetParameters/d437f816eb1bf3ff3e2d85a8048c38af377500fe462c15c36a29dba6efeb0a6a/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersd437f816eb1bf3ff3e2d85a8048c38af377500fe462c15c36a29dba6efeb0a6aS3Bucket59E1698A",
+            "trace": [
+              "new FileAssetParameters (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "PrizePoolTwitchAppStack.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack.ts:663:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:145:40)",
+              "AssetCode.bind (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/code.ts:277:20)",
+              "new Function (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/function.ts:600:29)",
+              "new PrizePoolTwitchAppStack (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/lib/prize-pool-twitch-app-stack.ts:24:38)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/bin/prize-pool-twitch-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PrizePoolTwitchAppStack/AssetParameters/d437f816eb1bf3ff3e2d85a8048c38af377500fe462c15c36a29dba6efeb0a6a/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersd437f816eb1bf3ff3e2d85a8048c38af377500fe462c15c36a29dba6efeb0a6aS3VersionKey00278D69",
+            "trace": [
+              "new FileAssetParameters (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "PrizePoolTwitchAppStack.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack.ts:663:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:145:40)",
+              "AssetCode.bind (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/code.ts:277:20)",
+              "new Function (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/function.ts:600:29)",
+              "new PrizePoolTwitchAppStack (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/lib/prize-pool-twitch-app-stack.ts:24:38)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/bin/prize-pool-twitch-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PrizePoolTwitchAppStack/AssetParameters/d437f816eb1bf3ff3e2d85a8048c38af377500fe462c15c36a29dba6efeb0a6a/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersd437f816eb1bf3ff3e2d85a8048c38af377500fe462c15c36a29dba6efeb0a6aArtifactHashE78A9495",
+            "trace": [
+              "new FileAssetParameters (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "PrizePoolTwitchAppStack.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack.ts:663:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:145:40)",
+              "AssetCode.bind (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/code.ts:277:20)",
+              "new Function (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/function.ts:600:29)",
+              "new PrizePoolTwitchAppStack (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/lib/prize-pool-twitch-app-stack.ts:24:38)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/bin/prize-pool-twitch-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PrizePoolTwitchAppStack/AssetParameters/74a860141bef9342a842556cec0b124de49c737eaab3f74cb306ab9ae1f6cb98/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters74a860141bef9342a842556cec0b124de49c737eaab3f74cb306ab9ae1f6cb98S3BucketFFCD820A",
+            "trace": [
+              "new FileAssetParameters (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "PrizePoolTwitchAppStack.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack.ts:663:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:145:40)",
+              "AssetCode.bind (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/code.ts:277:20)",
+              "new Function (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/function.ts:600:29)",
+              "new PrizePoolTwitchAppStack (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/lib/prize-pool-twitch-app-stack.ts:40:23)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/bin/prize-pool-twitch-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PrizePoolTwitchAppStack/AssetParameters/74a860141bef9342a842556cec0b124de49c737eaab3f74cb306ab9ae1f6cb98/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters74a860141bef9342a842556cec0b124de49c737eaab3f74cb306ab9ae1f6cb98S3VersionKey6F3C3FF0",
+            "trace": [
+              "new FileAssetParameters (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "PrizePoolTwitchAppStack.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack.ts:663:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:145:40)",
+              "AssetCode.bind (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/code.ts:277:20)",
+              "new Function (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/function.ts:600:29)",
+              "new PrizePoolTwitchAppStack (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/lib/prize-pool-twitch-app-stack.ts:40:23)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/bin/prize-pool-twitch-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PrizePoolTwitchAppStack/AssetParameters/74a860141bef9342a842556cec0b124de49c737eaab3f74cb306ab9ae1f6cb98/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters74a860141bef9342a842556cec0b124de49c737eaab3f74cb306ab9ae1f6cb98ArtifactHash8DB86670",
+            "trace": [
+              "new FileAssetParameters (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "PrizePoolTwitchAppStack.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack.ts:663:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:145:40)",
+              "AssetCode.bind (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/code.ts:277:20)",
+              "new Function (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/function.ts:600:29)",
+              "new PrizePoolTwitchAppStack (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/lib/prize-pool-twitch-app-stack.ts:40:23)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/bin/prize-pool-twitch-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PrizePoolTwitchAppStack/AssetParameters/bf68d536396eb6ee4370b5d6a3329a56301cb801ffc1d32ca98f2e88f503ee49/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersbf68d536396eb6ee4370b5d6a3329a56301cb801ffc1d32ca98f2e88f503ee49S3Bucket6E9EEC3C",
+            "trace": [
+              "new FileAssetParameters (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "PrizePoolTwitchAppStack.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack.ts:663:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:145:40)",
+              "AssetCode.bind (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/code.ts:277:20)",
+              "new Function (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/function.ts:600:29)",
+              "new PrizePoolTwitchAppStack (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/lib/prize-pool-twitch-app-stack.ts:47:26)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/bin/prize-pool-twitch-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PrizePoolTwitchAppStack/AssetParameters/bf68d536396eb6ee4370b5d6a3329a56301cb801ffc1d32ca98f2e88f503ee49/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersbf68d536396eb6ee4370b5d6a3329a56301cb801ffc1d32ca98f2e88f503ee49S3VersionKeyA11D9C6A",
+            "trace": [
+              "new FileAssetParameters (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "PrizePoolTwitchAppStack.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack.ts:663:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:145:40)",
+              "AssetCode.bind (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/code.ts:277:20)",
+              "new Function (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/function.ts:600:29)",
+              "new PrizePoolTwitchAppStack (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/lib/prize-pool-twitch-app-stack.ts:47:26)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/bin/prize-pool-twitch-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PrizePoolTwitchAppStack/AssetParameters/bf68d536396eb6ee4370b5d6a3329a56301cb801ffc1d32ca98f2e88f503ee49/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersbf68d536396eb6ee4370b5d6a3329a56301cb801ffc1d32ca98f2e88f503ee49ArtifactHash223CAC25",
+            "trace": [
+              "new FileAssetParameters (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "PrizePoolTwitchAppStack.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack.ts:663:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:145:40)",
+              "AssetCode.bind (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/code.ts:277:20)",
+              "new Function (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/function.ts:600:29)",
+              "new PrizePoolTwitchAppStack (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/lib/prize-pool-twitch-app-stack.ts:47:26)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/bin/prize-pool-twitch-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PrizePoolTwitchAppStack/ConnectTwitchBotLambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ConnectTwitchBotLambdaServiceRoleE1D3E0F3",
+            "trace": [
+              "new Role (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-iam/lib/role.ts:326:18)",
+              "new Function (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/function.ts:580:31)",
+              "new PrizePoolTwitchAppStack (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/lib/prize-pool-twitch-app-stack.ts:40:23)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/bin/prize-pool-twitch-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PrizePoolTwitchAppStack/ConnectTwitchBotLambda/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ConnectTwitchBotLambdaServiceRoleDefaultPolicy4AE0DC16",
+            "trace": [
+              "new Policy (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-iam/lib/policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-iam/lib/role.ts:367:28)",
+              "Function.addToPrincipal (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-iam/lib/grant.ts:164:61)",
+              "Table.grant (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:589:22)",
+              "new PrizePoolTwitchAppStack (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/lib/prize-pool-twitch-app-stack.ts:54:28)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/bin/prize-pool-twitch-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PrizePoolTwitchAppStack/ConnectTwitchBotLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ConnectTwitchBotLambda17DDEEC6",
+            "trace": [
+              "new Function (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/function.ts:642:35)",
+              "new PrizePoolTwitchAppStack (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/lib/prize-pool-twitch-app-stack.ts:40:23)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/bin/prize-pool-twitch-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PrizePoolTwitchAppStack/DisconnectTwitchBotLambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DisconnectTwitchBotLambdaServiceRole9277DD47",
+            "trace": [
+              "new Role (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-iam/lib/role.ts:326:18)",
+              "new Function (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/function.ts:580:31)",
+              "new PrizePoolTwitchAppStack (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/lib/prize-pool-twitch-app-stack.ts:47:26)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/bin/prize-pool-twitch-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PrizePoolTwitchAppStack/DisconnectTwitchBotLambda/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DisconnectTwitchBotLambdaServiceRoleDefaultPolicy5B72D238",
+            "trace": [
+              "new Policy (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-iam/lib/policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-iam/lib/role.ts:367:28)",
+              "Function.addToPrincipal (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-iam/lib/grant.ts:164:61)",
+              "Table.grant (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:589:22)",
+              "new PrizePoolTwitchAppStack (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/lib/prize-pool-twitch-app-stack.ts:55:28)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/bin/prize-pool-twitch-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PrizePoolTwitchAppStack/DisconnectTwitchBotLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DisconnectTwitchBotLambda13B52A21",
+            "trace": [
+              "new Function (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/aws-lambda/lib/function.ts:642:35)",
+              "new PrizePoolTwitchAppStack (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/lib/prize-pool-twitch-app-stack.ts:47:26)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/bin/prize-pool-twitch-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PrizePoolTwitchAppStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:22:24)",
+              "/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:140:5",
+              "visit (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:202:5)",
+              "visit (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:198:5)",
+              "injectMetadataResources (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:131:3)",
+              "Object.synthesize (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/stage.ts:180:23)",
+              "process.<anonymous> (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/@aws-cdk/core/lib/app.ts:123:45)",
+              "Object.onceWrapper (events.js:422:26)",
+              "process.emit (events.js:315:20)",
+              "process.EventEmitter.emit (domain.js:482:12)",
+              "process.emit (/Users/dduckmanton/Documents/AWS/prize-pool-twitch-app/node_modules/source-map-support/source-map-support.js:495:21)",
+              "process.topLevelDomainCallback (domain.js:137:15)"
+            ]
+          }
+        ]
+      },
+      "displayName": "PrizePoolTwitchAppStack"
+    }
+  }
+}
