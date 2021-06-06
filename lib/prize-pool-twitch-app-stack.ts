@@ -1,7 +1,7 @@
 import * as cdk from '@aws-cdk/core';
 import * as dynamodb from '@aws-cdk/aws-dynamodb';
 
-import { Code, Function, Runtime, StartingPosition } from '@aws-cdk/aws-lambda';
+import { AssetCode, Function, Runtime, StartingPosition } from '@aws-cdk/aws-lambda';
 import { DynamoEventSource } from '@aws-cdk/aws-lambda-event-sources';
 import { StreamViewType } from '@aws-cdk/aws-dynamodb';
 
@@ -22,14 +22,14 @@ export class PrizePoolTwitchAppStack extends cdk.Stack {
     });
 
     const reportNewSubscriberBotFn = new Function(this, 'ReportNewSubcriberBotLambda', {
-      functionName: 'reportNewSubcriberToTwitchBot2',
+      functionName: 'reportNewSubcriberToTwitchBot',
       environment: {
         'DomainName': 'fgdxwibczi.execute-api.ap-southeast-2.amazonaws.com',
         'Stage': 'Production'
       },
       runtime: Runtime.NODEJS_14_X,
       handler: 'index.handler',
-      code: Code.fromAsset('src/lambda/reportNewSub/reportNewSubscriberToTwitchBot.zip'),
+      code: new AssetCode(`src/lambda/reportNewSub`)
     });
 
     socketConnectionsTable.grant(reportNewSubscriberBotFn, 'dynamodb:Query');
@@ -38,17 +38,17 @@ export class PrizePoolTwitchAppStack extends cdk.Stack {
     es.bind(reportNewSubscriberBotFn);
 
     const connectFn = new Function(this, 'ConnectTwitchBotLambda', {
-      functionName: 'connectTwitchBotToPrizeApp2',
+      functionName: 'connectTwitchBotToPrizeApp',
       runtime: Runtime.NODEJS_14_X,
       handler: 'index.handler',
-      code: Code.fromAsset('src/lambda/connectTwitchBot/connectTwitchBot.zip'),
+      code: new AssetCode('src/lambda/connectTwitchBot'),
     });
 
     const disconnectFn = new Function(this, 'DisconnectTwitchBotLambda', {
-      functionName: 'disconnectTwitchBotFromPrizeApp2',
+      functionName: 'disconnectTwitchBotFromPrizeApp',
       runtime: Runtime.NODEJS_14_X,
       handler: 'index.handler',
-      code: Code.fromAsset('src/lambda/disconnectTwitchBot/disconnectTwitchBot.zip'),
+      code: new AssetCode('src/lambda/disconnectTwitchBot'),
     });
 
     socketConnectionsTable.grant(connectFn, 'dynamodb:PutItem');
