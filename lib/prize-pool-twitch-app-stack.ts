@@ -1,5 +1,8 @@
 import * as cdk from '@aws-cdk/core';
 import * as dynamodb from '@aws-cdk/aws-dynamodb';
+import * as apigateway from '@aws-cdk/aws-apigateway';
+import * as apigatewayv2 from '@aws-cdk/aws-apigatewayv2';
+import * as apigatewayv2integrations from '@aws-cdk/aws-apigatewayv2-integrations';
 
 import { AssetCode, Function, Runtime, StartingPosition } from '@aws-cdk/aws-lambda';
 import { DynamoEventSource } from '@aws-cdk/aws-lambda-event-sources';
@@ -53,5 +56,26 @@ export class PrizePoolTwitchAppStack extends cdk.Stack {
 
     socketConnectionsTable.grant(connectFn, 'dynamodb:PutItem');
     socketConnectionsTable.grant(disconnectFn, 'dynamodb:DeleteItem');
+
+    const socketApi = new apigatewayv2.WebSocketApi(this, 'PrizePoolTwitchBotApi', {
+      apiName: 'prizePoolTwitchBotApi2',
+      routeSelectionExpression: '$request.body.action',
+      connectRouteOptions: {
+        integration: new apigatewayv2integrations.LambdaWebSocketIntegration({ handler: connectFn })
+      },
+      disconnectRouteOptions: { 
+        integration: new apigatewayv2integrations.LambdaWebSocketIntegration({ handler: disconnectFn }) 
+      },
+      // TODO: Work out how to set up a mock integration
+      // defaultRouteOptions: {
+      //   integration: // 
+      // }
+    });
+
+    new apigatewayv2.WebSocketStage(this, 'ProductionStage', {
+      webSocketApi: socketApi,
+      stageName: 'Production',
+      autoDeploy: true
+    });
   }
 }
