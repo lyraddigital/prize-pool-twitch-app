@@ -1,21 +1,18 @@
 import { Construct } from "@aws-cdk/core";
-import { AttributeType, Table } from "@aws-cdk/aws-dynamodb";
+import { AttributeType, ITable, Table } from "@aws-cdk/aws-dynamodb";
 import { StreamViewType } from '@aws-cdk/aws-dynamodb';
-import { DynamoEventSource } from '@aws-cdk/aws-lambda-event-sources';
-import { IEventSource, StartingPosition } from "@aws-cdk/aws-lambda";
 
 export class PrizePoolDatabase extends Construct {
-    public tableStreamSource: IEventSource;
+    public table: ITable;
 
     constructor(scope: Construct, id: string) {
         super(scope, id);
 
-        const table = new Table(this, 'PrizePool', {
+        this.table = new Table(this, 'PrizePool', {
             tableName: 'PrizePool',
             stream: StreamViewType.NEW_IMAGE,
-            partitionKey: { name: 'MonthYear', type: AttributeType.STRING }
+            partitionKey: { name: 'MonthYear', type: AttributeType.STRING },
+            sortKey: { name: 'UserId', type: AttributeType.STRING }
         });
-
-        this.tableStreamSource = new DynamoEventSource(table, { startingPosition: StartingPosition.LATEST });
     }
 }
