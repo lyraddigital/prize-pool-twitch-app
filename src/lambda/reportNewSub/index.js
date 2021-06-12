@@ -1,14 +1,4 @@
-const AWS = require('aws-sdk');
-
-exports.handler = async (event) => {
-    const stage = process.env.Stage;
-    const domainName = process.env.DomainName;
-    const endpoint = `${domainName}/${stage}`;
-    const dynamoClient = new AWS.DynamoDB.DocumentClient();
-    const apigwManagementApi = new AWS.ApiGatewayManagementApi({
-        apiVersion: '2018-11-29',
-        endpoint: endpoint
-    });
+exports.handler = async (event) => {    
     const { Records: records } = event;
     
     for (let record of records) {
@@ -20,28 +10,11 @@ exports.handler = async (event) => {
                 UserId: { S: userId },
                 Username: { S: username },
                 DisplayName: { S: displayName }
-            } = subscriber;
+            } = subscriber;                    
             
-            const params = {
-                TableName: 'SocketConnections',
-                KeyConditionExpression: "Stage = :stage",
-                ExpressionAttributeValues: {
-                    ":stage": stage
-                }
-            };
-            
-            // Get all connections for current stage and 
-            // send a message back through each connection
-            const queryResult = await dynamoClient.query(params).promise(); 
-    
-            for (let item of queryResult.Items) {
-                const params = {
-                    ConnectionId: item.ConnectionId,
-                    Data: JSON.stringify({ userId, username, displayName })
-                };
-                
-                await apigwManagementApi.postToConnection(params).promise()
-            } 
+            console.log(userId, username, displayName);
+
+            // Fire a call to my new AppSync endpoint, which will in turn talk to my Twitch Bot
         }
     }
 };
