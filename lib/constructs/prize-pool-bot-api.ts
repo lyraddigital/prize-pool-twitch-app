@@ -54,12 +54,12 @@ export class PrizePoolBotApi extends Construct {
             }
         });
 
-        const demoDS = api.addDynamoDbDataSource('PrizePoolDatasource', props.datasourceTable);
+        const prizePoolDatasource = api.addDynamoDbDataSource('PrizePoolDatasource', props.datasourceTable);
 
         api.addQuery('getTwitchSub', new ResolvableField({
           returnType: twitchSubType.attribute(),
           args: getTwitchArg,
-          dataSource: demoDS,
+          dataSource: prizePoolDatasource,
           requestMappingTemplate: MappingTemplate.dynamoDbGetItem(
             'MonthYear',
             'UserId'
@@ -70,7 +70,7 @@ export class PrizePoolBotApi extends Construct {
         api.addMutation('createTwitchSub', new ResolvableField({
           returnType: twitchSubType.attribute(),
           args: createTwitchArg,
-          dataSource: demoDS,
+          dataSource: prizePoolDatasource,
           requestMappingTemplate: MappingTemplate.dynamoDbPutItem(
             PrimaryKey.partition('MonthYear').auto(),
             Values.projecting('input')
