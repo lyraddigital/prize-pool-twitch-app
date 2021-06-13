@@ -19,15 +19,11 @@ export class TwitchWebhookApi extends Construct {
       description: 'Handles all webhook posts from Twitch\'s EventSub system',      
     });
 
-    restApi.addModel('ChannelSubscription', {
+    const channelSubscriptionModel = restApi.addModel('ChannelSubscription', {
       contentType: 'application/json',
       modelName: 'ChannelSubscription',
       description: 'This model represents the webhook payload that Twitch sends to our subscription endpoint.',
       schema: ChannelSubscriptionSchema
-    });
-
-    restApi.addRequestValidator('ChannelSubscriptionRequestValidator', {
-      validateRequestBody: true
     });
 
     const subscriptionsResource = restApi.root.addResource('subscriptions');    
@@ -38,6 +34,10 @@ export class TwitchWebhookApi extends Construct {
     });
 
     subscriptionsResource.addMethod('POST', postSubscriptionIntegration, {
+      requestValidatorOptions: {
+        validateRequestBody: true
+      },
+      requestModels: { 'application/json': channelSubscriptionModel },
       methodResponses: [
         { statusCode: '200', responseModels: { 'text/plain ': Model.EMPTY_MODEL } },
         { statusCode: '400', responseModels: { 'application/json': Model.EMPTY_MODEL } }
