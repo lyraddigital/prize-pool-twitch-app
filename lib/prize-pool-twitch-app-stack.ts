@@ -1,15 +1,12 @@
 import { Construct, Stack, StackProps } from '@aws-cdk/core';
 
-import { 
-  PrizePoolDatabase
-} from './constructs';
-import { PrizePoolBotApi } from './constructs/prize-pool-bot-api';
+import { PrizePoolBotApi, TwitchWebhookApi } from './constructs';
 
 export class PrizePoolTwitchAppStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
-    const database = new PrizePoolDatabase(this, 'PrizePoolDatabase');
-    new PrizePoolBotApi(this, 'PrizePoolBotApi', { datasourceTable: database.table });
+    new TwitchWebhookApi(this, 'TwitchWebhookApi');
+    new PrizePoolBotApi(this, 'PrizePoolBotApi');
   }
 }
