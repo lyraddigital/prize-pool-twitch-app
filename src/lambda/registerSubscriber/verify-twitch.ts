@@ -1,6 +1,12 @@
-const crypto = require('crypto');
+import { createHmac } from 'crypto';
 
-exports.isValidTwitchRequest = (secretKey, currentSignature, messageId, timestamp, messageBody) => {
+export const isValidTwitchRequest = (
+    secretKey: string, 
+    currentSignature: string,
+    messageId: string,
+    timestamp: string,
+    messageBody: string
+) => {
     /*const bodyBuff = new Buffer(JSON.stringify(messageBody));
     const unencodedValue = `${messageId}${timestamp}${bodyBuff}`;
     

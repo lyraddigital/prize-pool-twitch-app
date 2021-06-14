@@ -1,9 +1,9 @@
-// const AWS = require('aws-sdk');
-// const AppSync = require('aws-appsync');
-const verifyTwitch = require('./verify-twitch');
+import { AUTH_TYPE, AWSAppSyncClient }  from 'aws-appsync';
+import gql from 'graphql-tag';
 
-exports.handler = async (event, context) => {
-    console.log(JSON.stringify(event));
+import { isValidTwitchRequest } from './verify-twitch';
+
+export const handler = async (event: any, context: any) => {
     const body = event.body;
     const headers = event.headers;
     const twitchMessageType = headers['twitch-eventsub-message-type'];
@@ -19,12 +19,38 @@ exports.handler = async (event, context) => {
         return body.challenge;
     }
 
-    // createTwitchSub(input: {DisplayName: "Daryl_Duck", MonthYear: "6-2021", UserId: "11928283", Username: "daryl_duck"}) {
-    //     DisplayName
-    //     MonthYear
-    //     UserId
-    //     Username
-    //   }
+    const prizePoolApiKey = process.env.PRIZE_POOL_API_KEY || '';
+    const prizePoolApiUrl = process.env.PRIZE_POOL_ENDPOINT || '';
+    const prizePoolRegion = process.env.PRIZE_POOL_REGION || '';
+
+    const client = new AWSAppSyncClient({
+        url: prizePoolApiUrl,
+        region: prizePoolRegion,
+        auth: {
+            type: AUTH_TYPE.API_KEY,
+            apiKey: prizePoolApiKey,
+        }
+    });
+
+    const query = gql`mutation CreateTwitchSub($twitchSubInput: TwitchSubInput) {
+        createTwitchSub(input: $twitchSubInput) {
+            DisplayName
+            MonthYear
+            UserId
+            Username
+        }
+    }`;
+
+    await client.mutate({
+        mutation: query,
+        fetchPolicy: 'network-only',
+        variables: {
+            DisplayName: 'Daryl_Duck',
+            MonthYear: '6-2021',
+            UserId: '123',
+            Username: 'daryl_duck'
+        }
+    });
     
     // const twitchMessageId = headers['twitch-eventsub-message-id'];
     // const [_, twitchSignature] = headers['twitch-eventsub-message-signature'].split('=');
@@ -32,7 +58,7 @@ exports.handler = async (event, context) => {
     // const secretKey = process.env.TWITCH_SECRET;
     
     // Now verify the signature of the request to ensure it came from Twitch
-    // if (verifyTwitch.isValidTwitchRequest(secretKey, twitchSignature, twitchMessageId, twitchTimestamp, body)) {
+    // if (isValidTwitchRequest(secretKey, twitchSignature, twitchMessageId, twitchTimestamp, body)) {
         /*const dynamoClient = new AWS.DynamoDB.DocumentClient();
         const prizePoolParams = {
           Item: {

@@ -6,7 +6,11 @@ export class PrizePoolTwitchAppStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
-    new TwitchWebhookApi(this, 'TwitchWebhookApi');
-    new PrizePoolBotApi(this, 'PrizePoolBotApi');
+    const prizePoolBotApi = new PrizePoolBotApi(this, 'PrizePoolBotApi');
+    new TwitchWebhookApi(this, 'TwitchWebhookApi', { 
+      prizePoolApiKey: prizePoolBotApi.apiKey,
+      prizePoolApiEndpoint: prizePoolBotApi.endpoint,
+      prizePoolRegion: prizePoolBotApi.region
+    });
   }
 }

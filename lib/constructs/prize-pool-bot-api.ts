@@ -10,6 +10,10 @@ import {
 } from '../schema/app-sync';
 
 export class PrizePoolBotApi extends Construct {
+  public apiKey: string;
+  public endpoint: string;
+  public region: string;
+
   constructor(scope: Construct, id: string) {
     super(scope, id);
 
@@ -28,6 +32,10 @@ export class PrizePoolBotApi extends Construct {
         },
       }
     });
+
+    this.apiKey = api.apiKey ?? '';
+    this.endpoint = api.graphqlUrl;
+    this.region = api.env.region;
 
     const prizePoolDatasource = api.addDynamoDbDataSource('PrizePoolDatasource', table);
 

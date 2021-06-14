@@ -1,18 +1,29 @@
 import { Construct } from "@aws-cdk/core";
-import { Deployment, EndpointType, LambdaIntegration, Model, PassthroughBehavior, RestApi, Stage } from "@aws-cdk/aws-apigateway";
+import { EndpointType, LambdaIntegration, Model, PassthroughBehavior, RestApi } from "@aws-cdk/aws-apigateway";
 import { Runtime } from "@aws-cdk/aws-lambda";
 import { NodejsFunction } from "@aws-cdk/aws-lambda-nodejs";
 
 import { ChannelSubscriptionSchema } from '../schema/api-gateway';
 
+export interface TwitchWebhookApiProps {
+  prizePoolApiKey: string;
+  prizePoolApiEndpoint: string;
+  prizePoolRegion: string;
+}
+
 export class TwitchWebhookApi extends Construct {
-  constructor(scope: Construct, id: string) {
+  constructor(scope: Construct, id: string, props: TwitchWebhookApiProps) {
     super(scope, id);
 
     const registerSubscriberLambda = new NodejsFunction(this, 'RegisterSubscriberLambda', {
       entry: 'src/lambda/registerSubscriber/index.js',
       handler: 'handler',
-      runtime: Runtime.NODEJS_14_X
+      runtime: Runtime.NODEJS_14_X,
+      environment: {
+        PRIZE_POOL_API_KEY: props.prizePoolApiKey,
+        PRIZE_POOL_ENDPOINT: props.prizePoolApiEndpoint,
+        PRIZE_POOL_REGION: props.prizePoolRegion
+      }
     });
 
     const restApi = new RestApi(this, 'RestApi', {
