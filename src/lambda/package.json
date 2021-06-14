@@ -15,8 +15,8 @@
     "typescript": "^4.3.2"
   },
   "dependencies": {
+    "crypto": "^1.0.1",
     "aws-appsync": "^4.0.3",
-    "aws-lambda": "^1.0.6",
     "aws-sdk": "^2.922.0"
   }
 }

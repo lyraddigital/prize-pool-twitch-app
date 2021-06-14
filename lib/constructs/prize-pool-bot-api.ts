@@ -1,5 +1,5 @@
 import { Construct } from "@aws-cdk/core";
-import { AuthorizationType, Directive, GraphqlApi, MappingTemplate, PrimaryKey, ResolvableField, Values } from '@aws-cdk/aws-appsync';
+import { AuthorizationType, Directive, GraphqlApi, KeyCondition, MappingTemplate, PrimaryKey, ResolvableField, Values } from '@aws-cdk/aws-appsync';
 import { AttributeType, Table } from "@aws-cdk/aws-dynamodb";
 
 import {
@@ -35,9 +35,8 @@ export class PrizePoolBotApi extends Construct {
       returnType: twitchSubType.attribute(),
       args: getTwitchArg,
       dataSource: prizePoolDatasource,
-      requestMappingTemplate: MappingTemplate.dynamoDbGetItem(
-        'MonthYear',
-        'UserId'
+      requestMappingTemplate: MappingTemplate.dynamoDbQuery(
+        KeyCondition.eq('MonthYear', 'MonthYear').and(KeyCondition.eq('UserId', 'UserId'))
       ),
       responseMappingTemplate: MappingTemplate.dynamoDbResultItem()
     }));
@@ -47,7 +46,10 @@ export class PrizePoolBotApi extends Construct {
       args: createTwitchArg,
       dataSource: prizePoolDatasource,
       requestMappingTemplate: MappingTemplate.dynamoDbPutItem(
-        PrimaryKey.partition('MonthYear').auto(),
+        PrimaryKey.partition("MonthYear")
+          .is("input.MonthYear")
+          .sort('UserId')
+          .is('input.UserId'),
         Values.projecting('input')
       ),
       responseMappingTemplate: MappingTemplate.dynamoDbResultItem()

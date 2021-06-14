@@ -1,5 +1,5 @@
 import { Construct } from "@aws-cdk/core";
-import { LambdaIntegration, Model, RestApi } from "@aws-cdk/aws-apigateway";
+import { Deployment, EndpointType, LambdaIntegration, Model, PassthroughBehavior, RestApi, Stage } from "@aws-cdk/aws-apigateway";
 import { Runtime } from "@aws-cdk/aws-lambda";
 import { NodejsFunction } from "@aws-cdk/aws-lambda-nodejs";
 
@@ -10,13 +10,18 @@ export class TwitchWebhookApi extends Construct {
     super(scope, id);
 
     const registerSubscriberLambda = new NodejsFunction(this, 'RegisterSubscriberLambda', {
-      entry: 'src/lambda/registerSubscriber/index',
-      handler: '.handler',
+      entry: 'src/lambda/registerSubscriber/index.js',
+      handler: 'handler',
       runtime: Runtime.NODEJS_14_X
     });
 
     const restApi = new RestApi(this, 'RestApi', {
-      description: 'Handles all webhook posts from Twitch\'s EventSub system',      
+      restApiName: 'TwitchPrizeDrawWebhookAPI',
+      description: 'Handles all webhook posts from Twitch\'s EventSub system',
+      endpointTypes: [EndpointType.REGIONAL],
+      deployOptions: {
+        stageName: 'Production'
+      }  
     });
 
     const channelSubscriptionModel = restApi.addModel('ChannelSubscription', {
@@ -28,13 +33,28 @@ export class TwitchWebhookApi extends Construct {
 
     const subscriptionsResource = restApi.root.addResource('subscriptions');    
     const postSubscriptionIntegration = new LambdaIntegration(registerSubscriberLambda, {
+      proxy: false,
+      passthroughBehavior: PassthroughBehavior.WHEN_NO_TEMPLATES,
+      requestTemplates: {
+        'application/json': `{
+    "body": $input.json('$'),
+    "headers": {
+        #foreach($param in $input.params().header.keySet())
+        "$param": "$util.escapeJavaScript($input.params().header.get($param))"
+        #if($foreach.hasNext),#end
+        #end
+    }
+}`
+      },
       integrationResponses: [
+        { statusCode: '200', responseTemplates: { 'application/json': `$input.path('$')` } },
         { statusCode: '400', selectionPattern: '.*errorMessage.*', responseTemplates: { 'application/json': `#set($inputRoot = $input.path('$'))` } }
       ]
     });
 
     subscriptionsResource.addMethod('POST', postSubscriptionIntegration, {
       requestValidatorOptions: {
+        requestValidatorName: 'Validate body',
         validateRequestBody: true
       },
       requestModels: { 'application/json': channelSubscriptionModel },
