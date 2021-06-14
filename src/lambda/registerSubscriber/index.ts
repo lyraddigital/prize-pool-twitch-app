@@ -33,23 +33,25 @@ export const handler = async (event: any, context: any) => {
         disableOffline: true
     });
 
-    const query = gql`mutation CreateTwitchSub($twitchSubInput: TwitchSubInput) {
+    const query = gql(`mutation CreateTwitchSub($twitchSubInput: TwitchSubInput) {
         createTwitchSub(input: $twitchSubInput) {
             DisplayName
             MonthYear
             UserId
             Username
         }
-    }`;
+    }`);
 
     await client.mutate({
         mutation: query,
         fetchPolicy: 'network-only',
         variables: {
-            DisplayName: 'Daryl_Duck',
-            MonthYear: '6-2021',
-            UserId: '123',
-            Username: 'daryl_duck'
+            $twitchSubInput: {
+                DisplayName: 'Daryl_Duck',
+                MonthYear: '6-2021',
+                UserId: '123',
+                Username: 'daryl_duck'
+            }
         }
     });
     
