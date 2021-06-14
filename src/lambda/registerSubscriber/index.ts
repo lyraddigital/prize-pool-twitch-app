@@ -29,7 +29,8 @@ export const handler = async (event: any, context: any) => {
         auth: {
             type: AUTH_TYPE.API_KEY,
             apiKey: prizePoolApiKey,
-        }
+        },
+        disableOffline: true
     });
 
     const query = gql`mutation CreateTwitchSub($twitchSubInput: TwitchSubInput) {
