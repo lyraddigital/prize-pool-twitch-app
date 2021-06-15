@@ -9,8 +9,7 @@ export class PrizePoolTwitchAppStack extends Stack {
     const prizePoolBotApi = new PrizePoolBotApi(this, 'PrizePoolBotApi');
     new TwitchWebhookApi(this, 'TwitchWebhookApi', { 
       prizePoolApiKey: prizePoolBotApi.apiKey,
-      prizePoolApiEndpoint: prizePoolBotApi.endpoint,
-      prizePoolRegion: prizePoolBotApi.region
+      prizePoolApiEndpoint: prizePoolBotApi.endpoint
     });
   }
 }

@@ -8,7 +8,6 @@ import { ChannelSubscriptionSchema } from '../schema/api-gateway';
 export interface TwitchWebhookApiProps {
   prizePoolApiKey: string;
   prizePoolApiEndpoint: string;
-  prizePoolRegion: string;
 }
 
 export class TwitchWebhookApi extends Construct {
@@ -21,8 +20,7 @@ export class TwitchWebhookApi extends Construct {
       runtime: Runtime.NODEJS_14_X,
       environment: {
         PRIZE_POOL_API_KEY: props.prizePoolApiKey,
-        PRIZE_POOL_ENDPOINT: props.prizePoolApiEndpoint,
-        PRIZE_POOL_REGION: props.prizePoolRegion
+        PRIZE_POOL_ENDPOINT: props.prizePoolApiEndpoint
       }
     });
 
